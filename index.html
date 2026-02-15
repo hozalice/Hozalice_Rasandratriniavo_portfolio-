@@ -552,7 +552,7 @@
                 colis_goal_desc: "Digitaliser ce processus via une application mobile performante utilisant React Native et Prisma. Elle permet aux chauffeurs et convoyeurs de gérer leurs colis instantanément sur smartphone : suivi en temps réel des livraisons, inventaire des valeurs et gestion des destinations sans effort papier.",
                 topo_modal_title: "Gestion Topographique & Webmapping",
                 topo_context_title: "Contexte & Justification",
-                topo_context_desc: "Réalisé pour ILS TOPO AFRIQUE, ce projet centralise la gestion des missions, équipes et ressources logistiques, auparavant dispersée sur plusieurs supports.",
+                topo_context_desc: "Réalisé pour ILS TOPO AFRIQUE, ce projet centralise la gestion des missions et ressources logistiques. Il intègre une solution d'intelligence artificielle basée sur l'architecture Large Language Model (LLM) via l'API Groq, permettant une analyse de données en temps réel avec une inférence à ultra-basse latence.",
                 topo_features_title: "Fonctionnalités Clés",
                 topo_features_desc: "<ul><li>Gestion des utilisateurs, rôles et droits d'accès.</li><li>Planification et suivi des missions terrain.</li><li>Module de Webmapping (PostGIS) pour la localisation des zones de travail.</li><li>Gestion des stocks, équipements et consommables.</li><li>Génération de rapports et documents de mission.</li></ul>",
                 topo_tech_title: "Technologies utilisées"
@@ -628,7 +628,7 @@
                 colis_goal_desc: "Digitize this process through a high-performance mobile application using React Native and Prisma. It allows drivers and couriers to manage their packages instantly on smartphones: real-time delivery tracking, value inventory, and destination management without paper effort.",
                 topo_modal_title: "Topographic Management & Webmapping",
                 topo_context_title: "Context & Rationale",
-                topo_context_desc: "Developed for ILS TOPO AFRIQUE, this project centralizes mission, team, and logistics resource management, previously scattered across multiple formats.",
+                topo_context_desc: "Developed for ILS TOPO AFRIQUE, this project centralizes mission and logistics management. It features an AI solution powered by Large Language Model (LLM) architecture via the Groq API, enabling real-time data analysis with ultra-low latency inference.",
                 topo_features_title: "Key Features",
                 topo_features_desc: "<ul><li>User management, roles, and access rights.</li><li>Field mission planning and tracking.</li><li>Webmapping module (PostGIS) for work zone localization.</li><li>Stock, equipment, and consumables management.</li><li>Mission reports and document generation.</li></ul>",
                 topo_tech_title: "Technologies Used"
@@ -673,20 +673,6 @@
                         <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL/PostGIS</span></div>
                         <div class="tech-item"><i class="fab fa-git-alt"></i><span>GitLab</span></div>
                     </div>
-
-                    <div class="chatbot-container" style="margin-top: 2.5rem; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;">
-                        <div style="background: var(--primary); color: white; padding: 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-robot"></i>
-                            <strong>Assistant IA ILS TOPO</strong>
-                        </div>
-                        <div id="chat-window" style="height: 200px; padding: 1rem; overflow-y: auto; background: var(--bg-alt); font-size: 0.9rem;">
-                            <div class="chat-msg bot">Bonjour ! Comment puis-je vous aider avec les statistiques de vos missions ?</div>
-                        </div>
-                        <div style="display: flex; padding: 0.5rem; background: white; border-top: 1px solid var(--border);">
-                            <input type="text" placeholder="Posez une question..." style="flex: 1; border: none; outline: none; padding: 0.5rem;">
-                            <button class="btn btn-primary" style="padding: 0.4rem 1rem;"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </div>
                 `,
             }
         };
@@ -728,46 +714,6 @@
 
             document.getElementById('projectModal').style.display = 'block';
             document.body.style.overflow = 'hidden'; // Stop scrolling
-
-            // Setup Chatbot if present
-            const chatInput = document.querySelector('.chatbot-container input');
-            const chatBtn = document.querySelector('.chatbot-container button');
-            const chatWindow = document.getElementById('chat-window');
-
-            if (chatInput && chatBtn) {
-                const sendMessage = () => {
-                    const text = chatInput.value.trim();
-                    if (!text) return;
-
-                    // User message
-                    const userMsg = document.createElement('div');
-                    userMsg.className = 'chat-msg user';
-                    userMsg.innerText = text;
-                    chatWindow.appendChild(userMsg);
-                    chatInput.value = '';
-
-                    // Bot Response (Simulated)
-                    setTimeout(() => {
-                        const botMsg = document.createElement('div');
-                        botMsg.className = 'chat-msg bot';
-                        if (text.toLowerCase().includes('stat')) {
-                            botMsg.innerText = currentLang === 'fr' ?
-                                "Voici les statistiques : 15 missions terminées ce mois-ci, 3 en cours." :
-                                "Here are the stats: 15 missions completed this month, 3 in progress.";
-                        } else {
-                            botMsg.innerText = currentLang === 'fr' ?
-                                "Je suis votre assistant IA. Je peux vous aider avec les statistiques ou le suivi des missions." :
-                                "I am your AI assistant. I can help you with stats or mission tracking.";
-                        }
-                        chatWindow.appendChild(botMsg);
-                        chatWindow.scrollTop = chatWindow.scrollHeight;
-                    }, 1000);
-                    chatWindow.scrollTop = chatWindow.scrollHeight;
-                };
-
-                chatBtn.onclick = sendMessage;
-                chatInput.onkeypress = (e) => { if (e.key === 'Enter') sendMessage(); };
-            }
         }
 
         function closeProject() {

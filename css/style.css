@@ -505,30 +505,6 @@ footer {
     color: var(--primary);
 }
 
-/* Chatbot Styles */
-.chatbot-container {
-    transition: var(--transition);
-}
-
-.chat-msg {
-    margin-bottom: 1rem;
-    padding: 0.8rem 1rem;
-    border-radius: 12px;
-    max-width: 80%;
-}
-
-.chat-msg.bot {
-    background: white;
-    border: 1px solid var(--border);
-    margin-right: auto;
-}
-
-.chat-msg.user {
-    background: var(--primary);
-    color: white;
-    margin-left: auto;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .hero-content {
