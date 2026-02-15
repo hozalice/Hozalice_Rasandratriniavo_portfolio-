@@ -78,6 +78,12 @@
     <nav>
         <div class="container">
             <a href="#" class="logo">HOZALICE.</a>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#accueil" data-i18n="nav_home">Accueil</a></li>
                 <li><a href="#profil" data-i18n="nav_profile">Profil</a></li>
@@ -91,7 +97,7 @@
                     </div>
                 </li>
             </ul>
-            <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;"
+            <a href="#contact" class="btn btn-primary nav-cta" style="padding: 0.5rem 1.2rem; font-size: 0.85rem;"
                 data-i18n="nav_contact_btn">Me
                 Contacter</a>
         </div>
@@ -146,8 +152,8 @@
                             style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem;"></i>
                         <h3 style="margin-bottom: 1rem;" data-i18n="service_2_title">Applications Mobiles</h3>
                         <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;"
-                            data-i18n="service_2_desc">Création d'applications mobiles cross-platform (iOS & Android)
-                            avec React Native. Une seule base de code pour une expérience utilisateur native et fluide.
+                            data-i18n="service_2_desc">Création d'applications mobiles. Une seule base de code pour une
+                            expérience utilisateur native et fluide.
                         </p>
                     </div>
                 </div>
@@ -400,10 +406,6 @@
                 <div class="modal-body" id="modalBody">
                     <!-- Dynamic Content -->
                 </div>
-                <div class="modal-footer">
-                    <a href="#" id="modalLink" class="btn btn-primary" download data-i18n="btn_download">Télécharger
-                        l'application</a>
-                </div>
             </div>
         </div>
 
@@ -503,12 +505,12 @@
                 profile_formation: "Formation Académique",
                 formation_it_desc: "Licence en Informatique (En cours)",
                 formation_it_date: "2021 - Aujourd'hui",
-                formation_lycee_desc: "Bacc Série C",
+                formation_lycee_desc: "Baccalauréat Série C",
                 profile_languages: "Langues",
-                lang_mg: "Malagasy:",
+                lang_mg: "Malgache :",
                 lang_mg_level: "Langue maternelle",
-                lang_fr: "Français:",
-                lang_en: "Anglais:",
+                lang_fr: "Français :",
+                lang_en: "Anglais :",
                 lang_level_b1: "Niveau B1",
                 skills_title: "Compétences Techniques",
                 skills_subtitle: "Les technologies que je maîtrise au quotidien",
@@ -516,6 +518,7 @@
                 projects_title: "Réalisations & Projets",
                 projects_subtitle: "Un aperçu de mon travail et de mes expériences",
                 tag_framework: "Framework",
+                project_1_title: "MySpring Framework",
                 project_1_desc: "Création d'un framework personnel avec Java pour la gestion des annotations, inspiré par Spring.",
                 project_2_title: "Gestion Cloud Crypto",
                 project_2_desc: "Application de gestion de Crypto-monnaie avec suivi en temps réel et authentification Firebase.",
@@ -523,7 +526,7 @@
                 project_3_desc: "Solution mobile pour digitaliser le suivi logistique des transporteurs malgaches.",
                 project_dotnet_title: "API Client ERPNext",
                 project_dotnet_desc: "Développement d'un client API pour la connexion aux modules ERPNext via REST API.",
-                project_topo_title: "Centralized web app",
+                project_topo_title: "Application Web Centralisée",
                 project_topo_desc: "Plateforme web de gestion centralisée et Webmapping pour bureau d'études topographiques.",
                 tag_management: "Gestion de Projet",
                 project_4_title: "Gestion Boulangerie",
@@ -541,7 +544,7 @@
                 footer_rights: "Tous droits réservés.",
                 btn_details: "En savoir plus",
                 btn_github: "Voir sur GitHub",
-                btn_download: "Télécharger l'application",
+                btn_download: "Télécharger l'APK",
                 colis_modal_title: "Suivi de Colis Local (Trans-Colis)",
                 colis_problem_title: "La Problématique",
                 colis_problem_desc: "À Madagascar, la gestion des colis par les taxi-brousse repose encore sur des carnets papier. Rechercher un colis spécifique dans ces listes interminables est une source de stress, de perte de temps et provoque souvent des oublis de livraison regrettables.",
@@ -552,7 +555,7 @@
                 topo_context_desc: "Réalisé pour ILS TOPO AFRIQUE, ce projet centralise la gestion des missions, équipes et ressources logistiques, auparavant dispersée sur plusieurs supports.",
                 topo_features_title: "Fonctionnalités Clés",
                 topo_features_desc: "<ul><li>Gestion des utilisateurs, rôles et droits d'accès.</li><li>Planification et suivi des missions terrain.</li><li>Module de Webmapping (PostGIS) pour la localisation des zones de travail.</li><li>Gestion des stocks, équipements et consommables.</li><li>Génération de rapports et documents de mission.</li></ul>",
-                topo_tech_title: "Stack Technique Utilisée"
+                topo_tech_title: "Technologies utilisées"
             },
             en: {
                 nav_home: "Home",
@@ -591,6 +594,7 @@
                 projects_title: "Achievements & Projects",
                 projects_subtitle: "A glimpse of my work and experiences",
                 tag_framework: "Framework",
+                project_1_title: "MySpring Framework",
                 project_1_desc: "Creation of a personal framework with Java for annotation management, inspired by Spring.",
                 project_2_title: "Crypto Cloud Management",
                 project_2_desc: "Cryptocurrency management application with real-time tracking and Firebase authentication.",
@@ -598,7 +602,7 @@
                 project_3_desc: "Mobile solution to digitize logistics tracking for Malagasy transporters.",
                 project_dotnet_title: "ERPNext API Client",
                 project_dotnet_desc: "Development of an API client for connecting to ERPNext modules via REST API.",
-                project_topo_title: "Centralized web app",
+                project_topo_title: "Centralized Web Application",
                 project_topo_desc: "Centralized web platform with Webmapping for topographic study offices.",
                 tag_management: "Project Management",
                 project_4_title: "Bakery Management",
@@ -616,7 +620,7 @@
                 footer_rights: "All rights reserved.",
                 btn_details: "Learn more",
                 btn_github: "View on GitHub",
-                btn_download: "Download Application",
+                btn_download: "Download APK",
                 colis_modal_title: "Local Package Tracking (Trans-Colis)",
                 colis_problem_title: "The Problem",
                 colis_problem_desc: "In Madagascar, package management by bush taxis still relies on paper notebooks. Searching for a specific package in these endless lists is a source of stress, time loss, and often causes regrettable delivery omissions.",
@@ -627,7 +631,7 @@
                 topo_context_desc: "Developed for ILS TOPO AFRIQUE, this project centralizes mission, team, and logistics resource management, previously scattered across multiple formats.",
                 topo_features_title: "Key Features",
                 topo_features_desc: "<ul><li>User management, roles, and access rights.</li><li>Field mission planning and tracking.</li><li>Webmapping module (PostGIS) for work zone localization.</li><li>Stock, equipment, and consumables management.</li><li>Mission reports and document generation.</li></ul>",
-                topo_tech_title: "Technical Stack Used"
+                topo_tech_title: "Technologies Used"
             }
         };
 
@@ -642,8 +646,14 @@
                     <p>${translations[lang].colis_problem_desc}</p>
                     <h3>${translations[lang].colis_goal_title}</h3>
                     <p>${translations[lang].colis_goal_desc}</p>
+                    
+                    <h3>${translations[lang].topo_tech_title}</h3>
+                    <div class="tech-logos">
+                        <div class="tech-item"><i class="fab fa-react"></i><span>React Native</span></div>
+                        <div class="tech-item"><i class="fas fa-database"></i><span>Prisma</span></div>
+                        <div class="tech-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                    </div>
                 `,
-                link: 'ressource/application-53dca0db-d26b-4f01-9c94-afd06da2ef65.apk'
             },
             topo: {
                 titleKey: 'topo_modal_title',
@@ -655,17 +665,29 @@
                     <p>${translations[lang].topo_context_desc}</p>
                     <h3>${translations[lang].topo_features_title}</h3>
                     <div class="modal-list">${translations[lang].topo_features_desc}</div>
+                    
                     <h3>${translations[lang].topo_tech_title}</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                        <span class="tag">Spring Boot 3.3.5</span>
-                        <span class="tag">Java 17</span>
-                        <span class="tag">PostgreSQL / PostGIS</span>
-                        <span class="tag">React JS</span>
-                        <span class="tag">GitLab</span>
-                        <span class="tag">Swagger</span>
+                    <div class="tech-logos">
+                        <div class="tech-item"><i class="fab fa-java"></i><span>Spring Boot 3.3.5</span></div>
+                        <div class="tech-item"><i class="fab fa-react"></i><span>React JS</span></div>
+                        <div class="tech-item"><i class="fas fa-database"></i><span>PostgreSQL/PostGIS</span></div>
+                        <div class="tech-item"><i class="fab fa-git-alt"></i><span>GitLab</span></div>
+                    </div>
+
+                    <div class="chatbot-container" style="margin-top: 2.5rem; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;">
+                        <div style="background: var(--primary); color: white; padding: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-robot"></i>
+                            <strong>Assistant IA ILS TOPO</strong>
+                        </div>
+                        <div id="chat-window" style="height: 200px; padding: 1rem; overflow-y: auto; background: var(--bg-alt); font-size: 0.9rem;">
+                            <div class="chat-msg bot">Bonjour ! Comment puis-je vous aider avec les statistiques de vos missions ?</div>
+                        </div>
+                        <div style="display: flex; padding: 0.5rem; background: white; border-top: 1px solid var(--border);">
+                            <input type="text" placeholder="Posez une question..." style="flex: 1; border: none; outline: none; padding: 0.5rem;">
+                            <button class="btn btn-primary" style="padding: 0.4rem 1rem;"><i class="fas fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 `,
-                link: null
             }
         };
 
@@ -704,18 +726,48 @@
             document.getElementById('modalTitle').innerText = translations[currentLang][data.titleKey];
             document.getElementById('modalBody').innerHTML = data.body(currentLang);
 
-            const modalLink = document.getElementById('modalLink');
-            const modalFooter = document.querySelector('.modal-footer');
-
-            if (data.link) {
-                modalLink.href = data.link;
-                modalFooter.style.display = 'block';
-            } else {
-                modalFooter.style.display = 'none';
-            }
-
             document.getElementById('projectModal').style.display = 'block';
             document.body.style.overflow = 'hidden'; // Stop scrolling
+
+            // Setup Chatbot if present
+            const chatInput = document.querySelector('.chatbot-container input');
+            const chatBtn = document.querySelector('.chatbot-container button');
+            const chatWindow = document.getElementById('chat-window');
+
+            if (chatInput && chatBtn) {
+                const sendMessage = () => {
+                    const text = chatInput.value.trim();
+                    if (!text) return;
+
+                    // User message
+                    const userMsg = document.createElement('div');
+                    userMsg.className = 'chat-msg user';
+                    userMsg.innerText = text;
+                    chatWindow.appendChild(userMsg);
+                    chatInput.value = '';
+
+                    // Bot Response (Simulated)
+                    setTimeout(() => {
+                        const botMsg = document.createElement('div');
+                        botMsg.className = 'chat-msg bot';
+                        if (text.toLowerCase().includes('stat')) {
+                            botMsg.innerText = currentLang === 'fr' ?
+                                "Voici les statistiques : 15 missions terminées ce mois-ci, 3 en cours." :
+                                "Here are the stats: 15 missions completed this month, 3 in progress.";
+                        } else {
+                            botMsg.innerText = currentLang === 'fr' ?
+                                "Je suis votre assistant IA. Je peux vous aider avec les statistiques ou le suivi des missions." :
+                                "I am your AI assistant. I can help you with stats or mission tracking.";
+                        }
+                        chatWindow.appendChild(botMsg);
+                        chatWindow.scrollTop = chatWindow.scrollHeight;
+                    }, 1000);
+                    chatWindow.scrollTop = chatWindow.scrollHeight;
+                };
+
+                chatBtn.onclick = sendMessage;
+                chatInput.onkeypress = (e) => { if (e.key === 'Enter') sendMessage(); };
+            }
         }
 
         function closeProject() {
@@ -730,8 +782,35 @@
             }
         }
 
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.className = 'fas fa-times';
+                } else {
+                    icon.className = 'fas fa-bars';
+                }
+            });
+        }
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon) icon.className = 'fas fa-bars';
+            });
+        });
+
         // Initial content update on page load
-        document.addEventListener('DOMContentLoaded', updateContent);
+        document.addEventListener('DOMContentLoaded', () => {
+            updateContent();
+        });
 
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
